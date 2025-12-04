@@ -1,0 +1,52 @@
+My Node.js CLI Project
+This is a simple automation script I made using Node.js. The main purpose of this code is to fetch data from an API and save it locally in a file so we can read it later without internet.
+
+I used the File System (fs) module to handle the files and fetch to get the data from the placeholder website.
+
+How it works
+Basically, the script connects to jsonplaceholder and gets Users and Posts. Then it saves everything into a file called cache.json. You can use commands to read this data.
+
+Requirements to run
+You need to have Node.js installed on your computer.
+
+No external libraries are needed, just standard modules.
+
+How to use the commands
+You have to run this file using the terminal or command prompt. Here is the list of commands you can use.
+
+Important: You must run the refresh command first otherwise it will say "No data available".
+
+1. Download the data
+This fetches the data from the internet and updates the cache file.
+
+Bash
+
+node server.js refresh
+2. See a list of posts
+This will show the posts ID and Title. You can put a limit number at the end.
+
+Bash
+
+node server.js list-posts 10
+3. Find a specific Post
+If you want to see the details of one post, use the ID.
+
+Bash
+
+node server.js post 5
+4. Find a specific User
+To see the details of a user inside the system.
+
+Bash
+
+node server.js user 2
+5. Filter posts by a User
+If you want to see all posts written by a specific user ID.
+
+Bash
+
+node server.js filter-posts 10
+Project Structure
+server.js - This is the main logic file.
+
+cache.json - This file is created automatically when you run refresh.
